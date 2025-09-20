@@ -28,3 +28,7 @@ but eventually I figured out manually what the correct data structure was for `W
 
 ## Decode `.RLE` files
 When opening these files in IrfanView, they look skewed. I don't know what's going on here. I might need to open the game executable and do some reverse engineering.
+
+UPDATE 20-09-2025: [I found an existing project called "Commandos Modding"](https://sites.google.com/site/commandosmod/downloads) which is quite extensive that has pretty much everything that is needed. 
+
+I used ChatGPT to port the RLE-to-BMP class to a NodeJS script.
