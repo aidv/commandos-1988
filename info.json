@@ -1,0 +1,902 @@
+{
+  "output/DATOS/BRIEFING/BR01_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR01_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR01_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR01_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR02_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR02_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR02_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR02_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR03_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR03_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR03_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR03_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR04_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR04_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR04_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR04_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR05_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR05_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR05_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR05_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR06_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR06_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR06_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR06_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR07_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR07_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR07_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR07_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR08_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR08_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR08_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR08_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR09_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR09_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR09_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR09_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR10_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR10_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR10_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR10_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR11_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR11_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR11_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR11_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR12_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR12_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR12_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR12_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR13_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR13_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR13_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR13_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR14_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR14_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR14_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR14_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR15_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR15_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR15_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR15_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR16_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR16_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR16_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR16_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR17_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR17_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR17_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR17_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR18_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR18_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR18_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR18_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR19_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR19_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR19_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR19_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR20_01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR20_02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR20_MA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/BRIEFING/BR20_RE.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0000_RLE/LIBR0000.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0000_RLE/LIBR0000.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0001_RLE/LIBR0001.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0001_RLE/LIBR0001.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0002_RLE/LIBR0002.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0002_RLE/LIBR0002.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0003_RLE/LIBR0003.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0003_RLE/LIBR0003.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0004_RLE/LIBR0004.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0004_RLE/LIBR0004.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0005_RLE/LIBR0005.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0005_RLE/LIBR0005.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0006_RLE/LIBR0006.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0006_RLE/LIBR0006.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0007_RLE/LIBR0007.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0007_RLE/LIBR0007.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0008_RLE/LIBR0008.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0008_RLE/LIBR0008.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0009_RLE/LIBR0009.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0009_RLE/LIBR0009.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0010_RLE/LIBR0010.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0010_RLE/LIBR0010.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0011_RLE/LIBR0011.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0011_RLE/LIBR0011.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0012_RLE/LIBR0012.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0012_RLE/LIBR0012.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0013_RLE/LIBR0013.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0013_RLE/LIBR0013.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0015_RLE/LIBR0015.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0015_RLE/LIBR0015.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0016_RLE/LIBR0016.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0016_RLE/LIBR0016.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0017_RLE/LIBR0017.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0017_RLE/LIBR0017.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0018_RLE/LIBR0018.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0018_RLE/LIBR0018.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0019_RLE/LIBR0019.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0019_RLE/LIBR0019.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0020_RLE/LIBR0020.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0020_RLE/LIBR0020.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0021_RLE/LIBR0021.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0021_RLE/LIBR0021.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0022_RLE/LIBR0022.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0022_RLE/LIBR0022.mask.bmp": {
+    "width": 260,
+    "height": 200
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0023_RLE/LIBR0023.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0023_RLE/LIBR0023.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0024_RLE/LIBR0024.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/LIBRETAS/LIBR0024_RLE/LIBR0024.mask.bmp": {
+    "width": 185,
+    "height": 229
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/BARS0000_RLE/BARS0000.bmp": {
+    "width": 351,
+    "height": 27
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/BARS0000_RLE/BARS0000.mask.bmp": {
+    "width": 351,
+    "height": 27
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/BARS0001_RLE/BARS0001.bmp": {
+    "width": 13,
+    "height": 28
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/BARS0001_RLE/BARS0001.mask.bmp": {
+    "width": 13,
+    "height": 28
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/FALTACD.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP01.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP02.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP03.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP04.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP05.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP06.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP07.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELP08.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/HELPMENU.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0000_RLE/LOAD0000.bmp": {
+    "width": 313,
+    "height": 350
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0000_RLE/LOAD0000.mask.bmp": {
+    "width": 313,
+    "height": 350
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0001_RLE/LOAD0001.bmp": {
+    "width": 264,
+    "height": 23
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0001_RLE/LOAD0001.mask.bmp": {
+    "width": 264,
+    "height": 23
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0002_RLE/LOAD0002.bmp": {
+    "width": 282,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0002_RLE/LOAD0002.mask.bmp": {
+    "width": 282,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0003_RLE/LOAD0003.bmp": {
+    "width": 259,
+    "height": 29
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOAD0003_RLE/LOAD0003.mask.bmp": {
+    "width": 259,
+    "height": 29
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/LOADING.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/MBRIEFMA.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/MENU1024.BMP": {
+    "width": 1024,
+    "height": 768
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/MENU512.BMP": {
+    "width": 512,
+    "height": 384
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/MENU640.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/MENU800.BMP": {
+    "width": 800,
+    "height": 600
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PROM0000_RLE/PROM0000.bmp": {
+    "width": 78,
+    "height": 15
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PROM0000_RLE/PROM0000.mask.bmp": {
+    "width": 78,
+    "height": 15
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT000.BMP": {
+    "width": 344,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT001.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT002.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT003.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT004.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT005.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT006.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT007.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT008.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT009.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT010.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/PUNT011.BMP": {
+    "width": 296,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/SAVE0000_RLE/SAVE0000.bmp": {
+    "width": 313,
+    "height": 350
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/SAVE0000_RLE/SAVE0000.mask.bmp": {
+    "width": 313,
+    "height": 350
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/MISC/SETUP.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT10000_RLE/BOT10000.bmp": {
+    "width": 189,
+    "height": 40
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT10000_RLE/BOT10000.mask.bmp": {
+    "width": 189,
+    "height": 40
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT10001_RLE/BOT10001.bmp": {
+    "width": 189,
+    "height": 40
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT10001_RLE/BOT10001.mask.bmp": {
+    "width": 189,
+    "height": 40
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT20000_RLE/BOT20000.bmp": {
+    "width": 37,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT20000_RLE/BOT20000.mask.bmp": {
+    "width": 37,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT20001_RLE/BOT20001.bmp": {
+    "width": 37,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT20001_RLE/BOT20001.mask.bmp": {
+    "width": 37,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT20002_RLE/BOT20002.bmp": {
+    "width": 37,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT20002_RLE/BOT20002.mask.bmp": {
+    "width": 37,
+    "height": 31
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT30000_RLE/BOT30000.bmp": {
+    "width": 37,
+    "height": 32
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT30000_RLE/BOT30000.mask.bmp": {
+    "width": 37,
+    "height": 32
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT30001_RLE/BOT30001.bmp": {
+    "width": 37,
+    "height": 32
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT30001_RLE/BOT30001.mask.bmp": {
+    "width": 37,
+    "height": 32
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT30002_RLE/BOT30002.bmp": {
+    "width": 37,
+    "height": 32
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/BOT30002_RLE/BOT30002.mask.bmp": {
+    "width": 37,
+    "height": 32
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM00000_RLE/COM00000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM00000_RLE/COM00000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM00001_RLE/COM00001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM00001_RLE/COM00001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM10000_RLE/COM10000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM10000_RLE/COM10000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM10001_RLE/COM10001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM10001_RLE/COM10001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM20000_RLE/COM20000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM20000_RLE/COM20000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM20001_RLE/COM20001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM20001_RLE/COM20001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM30000_RLE/COM30000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM30000_RLE/COM30000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM30001_RLE/COM30001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM30001_RLE/COM30001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM40000_RLE/COM40000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM40000_RLE/COM40000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM40001_RLE/COM40001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM40001_RLE/COM40001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM50000_RLE/COM50000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM50000_RLE/COM50000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM50001_RLE/COM50001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM50001_RLE/COM50001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM60000_RLE/COM60000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM60000_RLE/COM60000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM60001_RLE/COM60001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM60001_RLE/COM60001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM70000_RLE/COM70000.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM70000_RLE/COM70000.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM70001_RLE/COM70001.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/COM70001_RLE/COM70001.mask.bmp": {
+    "width": 58,
+    "height": 69
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/MENRED2.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/MENUCOM.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/MENUCOMB.BMP": {
+    "width": 640,
+    "height": 480
+  },
+  "output/DATOS/RECURSOS/BMPS/SYSTEM/RED/MENURED.BMP": {
+    "width": 640,
+    "height": 480
+  }
+}

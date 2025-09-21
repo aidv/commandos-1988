@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Unpack",
+            "name": "1. Unpack",
             "program": "${workspaceFolder}/unpack.js",
             "request": "launch",
             "skipFiles": [
@@ -14,18 +14,9 @@
             "type": "node"
         },
 
-        {
-            "name": "Pack",
-            "program": "${workspaceFolder}/pack.js",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
-        },
 
         {
-            "name": "RLE -> BMP",
+            "name": "2. RLE -> BMP",
             "program": "${workspaceFolder}/rle2bmp.js",
             "request": "launch",
             "skipFiles": [
@@ -35,13 +26,43 @@
         },
 
         {
-            "name": "BMP -> RLE",
+            "name": "3. Info Builder",
+            "program": "${workspaceFolder}/infoBuilder.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+
+        {
+            "name": "4. Image Ensurer",
+            "program": "${workspaceFolder}/imgEnsurer.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+
+        {
+            "name": "5. BMP -> RLE",
             "program": "${workspaceFolder}/bmp2rle.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "type": "node"
-        }
+        },
+
+        {
+            "name": "6. Pack",
+            "program": "${workspaceFolder}/pack.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
     ]
 }

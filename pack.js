@@ -21,7 +21,7 @@ const path = require("path");
 
 /* --------------------- EDIT THESE --------------------- */
 const INPUT_DIR   = __dirname + '/output/';   // <- folder to pack
-const OUTPUT_FILE = __dirname + "/WARGAME_NEW.DIR";  // <- output .DIR path
+const OUTPUT_FILE = __dirname + "/WARGAME_REPACKED.DIR";  // <- output .DIR path
 /* ------------------------------------------------------ */
 
 

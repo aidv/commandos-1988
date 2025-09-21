@@ -2,85 +2,92 @@
 Ported from Ferdinand Zeppelin project "Commandos Modding" (https://sites.google.com/site/commandosmod/downloads)
 ******/
 
+
 const fs = require('fs');
 const fsp = fs.promises;
 const path = require('path');
 
 function pad4(n){ const p = (4 - (n % 4)) & 3; return p === 4 ? 0 : p; }
-function readUInt16LE(b,o){ return b.readUInt16LE(o); }
-function readInt32LE(b,o){ return b.readInt32LE(o); }
-function readUInt32LE(b,o){ return b.readUInt32LE(o); }
-function write3le(num){ const b=Buffer.alloc(3); b[0]=num&0xFF; b[1]=(num>>>8)&0xFF; b[2]=(num>>>16)&0xFF; return b; }
+function readU16(b,o){ return b.readUInt16LE(o); }
+function readI32(b,o){ return b.readInt32LE(o); }
+function readU32(b,o){ return b.readUInt32LE(o); }
 async function readFileSafe(p){ try{ return await fsp.readFile(p); } catch { return null; } }
 
 // ---- BMP parsing (8-bit indexed BI_RGB) ----
 function parseIndexedBmp(buf){
   if (buf.slice(0,2).toString('ascii') !== 'BM') throw new Error('Not a BMP');
-  const dibSize = readUInt32LE(buf, 14);
+  const dibSize = readU32(buf, 14);
   if (dibSize < 40) throw new Error('Unsupported DIB header');
-  const width  = readInt32LE(buf, 18);
-  const height = readInt32LE(buf, 22);
-  const planes = readUInt16LE(buf, 26);
-  const bitCnt = readUInt16LE(buf, 28);
-  const compression = readUInt32LE(buf, 30);
-  const clrUsed = readUInt32LE(buf, 46);
-  const offBits = readUInt32LE(buf, 10);
+
+  const width  = readI32(buf, 18);
+  const height = readI32(buf, 22);
+  const planes = readU16(buf, 26);
+  const bitCnt = readU16(buf, 28);
+  const comp   = readU32(buf, 30);
+  const clrUsed= readU32(buf, 46);
+  const offBits= readU32(buf, 10);
+
   if (planes !== 1) throw new Error('planes != 1');
-  if (!(bitCnt === 8 && compression === 0)) throw new Error('Expected 8bpp BI_RGB');
+  if (!(bitCnt === 8 && comp === 0)) throw new Error('Expected 8bpp BI_RGB');
 
-  const heightAbs = Math.abs(height);
-  const paletteEntries = clrUsed && clrUsed !== 0 ? clrUsed : 256;
+  const hAbs = Math.abs(height);
+  const palEntries = clrUsed && clrUsed !== 0 ? clrUsed : 256;
 
+  // Read up to 1024 bytes of palette (BGRA per entry)
   const palette = Buffer.alloc(1024, 0);
-  const paletteStart = 14 + dibSize;
-  buf.copy(palette, 0, paletteStart, paletteStart + Math.min(1024, paletteEntries*4));
+  const palStart = 14 + dibSize;
+  buf.copy(palette, 0, palStart, palStart + Math.min(1024, palEntries*4));
 
+  // Read pixel rows: BMP stores bottom-up if height>0
   const rowPad = pad4(width);
-  const rows = Array.from({length: heightAbs}, () => Buffer.alloc(width + rowPad, 0));
-
-  // bottom-up if height > 0
+  const rowsWithPad = Array.from({length: hAbs}, () => Buffer.alloc(width + rowPad, 0));
   let src = offBits;
-  for (let r = heightAbs - 1; r >= 0; r--) {
-    buf.copy(rows[r], 0, src, src + width);
+  for (let r = hAbs - 1; r >= 0; r--) { // flip to top-down in memory
+    buf.copy(rowsWithPad[r], 0, src, src + width);
     src += (width + rowPad);
   }
-  return { width, height: heightAbs, palette, rows };
+  return { width, height: hAbs, palette, rowsWithPad };
 }
 
-// ---- Mask parsing -> classMap + maskRows ----
+// ---- Mask parsing -> classMap + maskRows (no index remap) ----
 function parseMaskBmp(buf, expectedW, expectedH){
-  const { width, height, rows, palette } = parseIndexedBmp(buf);
+  const { width, height, rowsWithPad, palette } = parseIndexedBmp(buf);
   if (width !== expectedW || height !== expectedH) throw new Error('Mask BMP dimensions mismatch');
 
-  // palette BGRA → class: 0 transparent, 1 absolute, 2 literal
+  // palette BGRA → class: 0 transparent(black), 1 absolute(other), 2 literal(white)
   const classMap = new Array(256).fill(1);
   for (let i = 0; i < 256; i++) {
     const b = palette[i*4 + 0], g = palette[i*4 + 1], r = palette[i*4 + 2];
-    if (r === 0 && g === 0 && b === 0) classMap[i] = 0;
-    else if (r === 255 && g === 255 && b === 255) classMap[i] = 2;
-    else classMap[i] = 1;
+    if (r === 0 && g === 0 && b === 0) classMap[i] = 0;            // black
+    else if (r === 255 && g === 255 && b === 255) classMap[i] = 2; // white
+    else classMap[i] = 1;                                          // other
   }
 
-  // strip pad
+  // Strip pad to width-only rows
   const maskRows = Array.from({length: height}, (_, y) => {
     const out = Buffer.alloc(expectedW);
-    rows[y].copy(out, 0, 0, expectedW);
+    rowsWithPad[y].copy(out, 0, 0, expectedW);
     return out;
   });
   return { maskRows, classMap };
 }
 
-// ---- Encoder (rows -> custom RLE) ----
-function encodeToCustomRLE(rows, maskRows, width, classMap){
-  const height = rows.length;
+// ---- Encoder (rows -> custom RLE) — returns stream + per-row sizes ----
+function encodeToCustomRLE(rowsNoPad, maskRows, width, classMap){
+  const height = rowsNoPad.length;
   const out = [];
+  const rowSizes = new Array(height).fill(0);
+
   for (let y = 0; y < height; y++) {
+    const rowStart = out.length;
+    const row = rowsNoPad[y];
     let x = 0;
+
     while (x < width) {
       const maskIdx = maskRows ? maskRows[y][x] : 255;
-      const type = maskRows ? classMap[maskIdx] : 2; // default literal
+      const type = maskRows ? classMap[maskIdx] : 2; // default to literal if no mask
 
-      // find contiguous run of same type
+      // grow run of same type
       let run = 1;
       while (x + run < width) {
         const mi = maskRows ? maskRows[y][x + run] : 255;
@@ -90,7 +97,7 @@ function encodeToCustomRLE(rows, maskRows, width, classMap){
       }
 
       if (type === 0) {
-        // transparent: 0xFF, count (<=255)
+        // transparent: 0xFF, <count>, chunks of 255, no payload
         let rem = run;
         while (rem > 0) {
           const chunk = Math.min(255, rem);
@@ -99,35 +106,93 @@ function encodeToCustomRLE(rows, maskRows, width, classMap){
           rem -= chunk;
         }
       } else if (type === 1) {
-        // absolute: 0xFE, count (<=255), then bytes
+        // absolute: 0xFE, <count>, then <count bytes>, chunks of 255
         let rem = run;
         while (rem > 0) {
           const chunk = Math.min(255, rem);
           out.push(0xFE, chunk);
-          for (let i = 0; i < chunk; i++) out.push(rows[y][x + i]);
+          for (let i = 0; i < chunk; i++) out.push(row[x + i]);
           x += chunk;
           rem -= chunk;
         }
       } else {
-        // literal: count (<=253), then bytes
+        // literal: <count>, then <count bytes>, chunks of 253
         let rem = run;
         while (rem > 0) {
           const chunk = Math.min(253, rem);
           out.push(chunk);
-          for (let i = 0; i < chunk; i++) out.push(rows[y][x + i]);
+          for (let i = 0; i < chunk; i++) out.push(row[x + i]);
           x += chunk;
           rem -= chunk;
         }
       }
     }
+    rowSizes[y] = out.length - rowStart;
   }
-  return Buffer.from(out);
+
+  return { stream: Buffer.from(out), rowSizes };
 }
 
-// ---- Pack one folder ----
+// ---- Helpers for little-endian writes ----
+function u16le(n){ const b=Buffer.alloc(2); b.writeUInt16LE(n,0); return b; }
+function u32le(n){ const b=Buffer.alloc(4); b.writeUInt32LE(n,0); return b; }
+
+// ---- Java-style container with "libr" block + per-row table ----
+function buildJavaStyleContainer(width, height, palette, rowSizes, stream){
+  if (palette.length !== 1024) throw new Error('Palette must be 1024 bytes');
+
+  // BITMAPFILEHEADER (14) + BITMAPINFOHEADER (40) — placeholders for size/offBits
+  const fileHdr = Buffer.alloc(14);
+  fileHdr.write('BM', 0, 'ascii');
+  // bfSize @2, bfOffBits @10 will be patched later
+
+  const dib = Buffer.alloc(40);
+  dib.writeUInt32LE(40, 0);            // biSize
+  dib.writeInt32LE(width, 4);
+  dib.writeInt32LE(height, 8);
+  dib.writeUInt16LE(1, 12);            // biPlanes
+  dib.writeUInt16LE(8, 14);            // biBitCount
+  dib.writeUInt32LE(4, 16);            // biCompression = BI_RLE4
+  dib.writeUInt32LE(stream.length, 20);// biSizeImage
+  dib.writeInt32LE(2835, 24);          // XPelsPerMeter
+  dib.writeInt32LE(2835, 28);          // YPelsPerMeter
+  dib.writeUInt32LE(0, 32);            // biClrUsed
+  dib.writeUInt32LE(0, 36);            // biClrImportant
+
+  // Java's extra block between palette and stream:
+  // "libr" + width(2)+00(2) + height(2)+00(2) + 4 zero bytes + per-row cumulative table (rows 0..h-2)
+  const tag = Buffer.from('libr', 'ascii');
+  const dims = Buffer.concat([ u16le(width), u16le(0), u16le(height), u16le(0) ]);
+  const z4   = Buffer.alloc(4, 0);
+
+  // cumulative table
+  const cum = [];
+  let acc = 0;
+  for (let y = 0; y < height - 1; y++) {
+    acc += rowSizes[y];
+    cum.push(u32le(acc));
+  }
+  const rowTable = Buffer.concat(cum);
+
+  // Everything up to (but not including) the stream
+  const beforeStream = Buffer.concat([fileHdr, dib, palette, tag, dims, z4, rowTable]);
+
+  // bfOffBits is the start of the stream
+  const bfOffBits = beforeStream.length;
+  // Patch header fields now that we know off & size
+  beforeStream.writeUInt32LE(bfOffBits + stream.length, 2);  // bfSize
+  beforeStream.writeUInt32LE(bfOffBits, 10);                  // bfOffBits
+
+  // Final file = header/dib/palette/“libr”/table + stream
+  return Buffer.concat([beforeStream, stream]);
+}
+
+// ---- Pack one *_RLE folder ----
 async function packOneFolder(folderPath){
-  var baseName = path.basename(folderPath).replace('_RLE', '');      // e.g. "sprite_RLE"
-  const parent   = path.dirname(folderPath);
+  const folderName = path.basename(folderPath);          // e.g. "NAME_RLE"
+  const baseName   = folderName.replace(/_RLE$/i, '');   // "NAME"
+  const parent     = path.dirname(folderPath);
+
   const bmpPath  = path.join(folderPath, `${baseName}.bmp`);
   const maskPath = path.join(folderPath, `${baseName}.mask.bmp`);
 
@@ -135,48 +200,35 @@ async function packOneFolder(folderPath){
   const maskBuf = await readFileSafe(maskPath);
   if (!bmpBuf) throw new Error(`Missing main BMP at ${bmpPath}`);
 
-  const { width, height, palette, rows: rowsWithPad } = parseIndexedBmp(bmpBuf);
-  const rows = rowsWithPad.map(r => r.subarray(0, width)); // drop pad
+  // Parse BMP (produces top-down row array)
+  const { width, height, palette, rowsWithPad } = parseIndexedBmp(bmpBuf);
+  const rowsNoPad = rowsWithPad.map(r => r.subarray(0, width)); // drop padding bytes
 
+  // Parse mask (optional) for typing only
   let maskRows = null, classMap = null;
   if (maskBuf) {
     ({ maskRows, classMap } = parseMaskBmp(maskBuf, width, height));
   } else {
-    classMap = new Array(256).fill(2); // no mask => literal
+    // No mask → everything is literal (type 2)
+    classMap = new Array(256).fill(2);
   }
 
-  
-  baseName = path.basename(folderPath).replace('_RLE', '.RLE');
+  // Encode stream + per-row sizes (needed for the table)
+  const { stream, rowSizes } = encodeToCustomRLE(rowsNoPad, maskRows, width, classMap);
 
-  const stream = encodeToCustomRLE(rows, maskRows, width, classMap);
+  // Build Java-style container ("libr" block + row table before stream)
+  const outBuf = buildJavaStyleContainer(width, height, palette, rowSizes, stream);
 
-  // simple container header used by our decoder
-  const var16 = 0;
-  const var10 = 54 + 1024 + 12 + var16 * 4;        // 1090
-  const var9  = 1024 + 54 + 12 + var16 * 4 + stream.length;
+  const outPath = path.join(parent, `${baseName}.RLE`);
+  await fsp.writeFile(outPath, outBuf);
 
-  const parts = [];
-  parts.push(Buffer.from('BM', 'ascii'));           // 2
-  parts.push(write3le(var9));                       // 3
-  parts.push(Buffer.alloc(5, 0));                   // 5
-  parts.push(write3le(var10));                      // 3
-  parts.push(Buffer.alloc(5, 0));                   // 5
-  parts.push(write3le(width));  parts.push(Buffer.alloc(1, 0));
-  parts.push(write3le(height)); parts.push(Buffer.alloc(1, 0));
-  parts.push(Buffer.alloc(28, 0));                  // reserved
-  if (palette.length !== 1024) throw new Error('Palette must be 1024 bytes');
-  parts.push(palette);                              // 1024 BGRA
-  parts.push(Buffer.alloc(12, 0));                  // after var16-table
-  parts.push(stream);
+  // Delete the source folder on success
+  await fsp.rm(folderPath, { recursive: true, force: true });
 
-  const outPath = path.join(parent, `${baseName}`); // <parent>/<FolderName>_RLE
-  await fsp.writeFile(outPath, Buffer.concat(parts));
-
-  await fsp.rm(folderPath, { recursive: true, force: true }); // delete source folder
   return outPath;
 }
 
-// ---- Walk outputs/ for *_RLE folders ----
+// ---- Walk __dirname/output for *_RLE folders ----
 async function walkForRLEDirs(root, out){
   const entries = await fsp.readdir(root, { withFileTypes: true });
   for (const d of entries) {
@@ -206,7 +258,7 @@ async function main(){
       const out = await packOneFolder(dir);
       console.log(`OK: ${dir} -> ${out} (folder deleted)`);
     } catch (e) {
-      console.error(`FAIL: ${dir} — ${e.message || e}`);
+      console.error(`FAIL: ${dir} — ${e.message}`);
     }
   }
 }
